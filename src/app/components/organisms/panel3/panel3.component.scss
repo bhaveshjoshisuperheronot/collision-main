@@ -1,0 +1,170 @@
+.collide {
+    &__panel3 {
+        width: 90%;
+        padding: 4.5rem 0 0;
+        box-sizing: border-box;
+
+        &__subtitle {
+            text-transform: none;
+            width: 20rem;
+            font-family: var(--mont-light);
+            font-size: 1.5rem;
+            -webkit-text-stroke-width: 0px;
+            color: var(--white);
+            line-height: 1.2;
+            text-align: center;
+            float: right;
+            margin: -0.3rem 3rem 0 0;
+
+            .bold {
+                font-family: var(--mont-bold);
+                text-transform: uppercase;
+                display: block;
+            }
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        &__sections {
+            display: flex;
+        }
+
+        &__actions {
+            flex-grow: 1;
+            display: flex;
+            flex-wrap: wrap;
+            height: 60%;
+            padding-top: 7rem;
+        }
+
+        &__btn {
+            width: 50%;
+            padding: 1rem;
+            box-sizing: border-box;
+            margin-bottom: 2rem;
+            opacity: 0;
+            top: 1rem;
+            position: relative;
+        }
+
+        &__gif {
+            width: 30%;
+            height: 50rem;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: -3rem -1rem;
+            position: relative;
+            right: -1rem;
+            opacity: 0;
+        }
+
+        app-title {
+            opacity: 0;
+            top: -1rem;
+            position: relative;
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .collide {
+        &__panel3 {
+            &__subtitle {
+                width: 13rem;
+                font-size: 1rem;
+            }
+
+            &__sections {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            &__gif {
+                width: 60%;
+                background-position: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .collide {
+        &__panel3 {
+            &__subtitle {
+                width: 100%;
+                font-size: 1rem;
+                margin: 1rem auto;
+            }
+
+            &__actions {
+                padding-top: 1rem;
+            }
+
+            &__gif {
+                width: 60%;
+                height: 30rem;
+            }
+        }
+    }
+}
+
+:host {
+    .animate {
+        .collide {
+            &__panel3 {
+                app-title {
+                    top: 0;
+                    opacity: 1;
+                    animation: fadeDown 0.5s linear;
+                }
+
+                &__btn {
+                    top: 0;
+                    opacity: 1;
+                    animation: fadeUp 0.5s linear;
+                }
+
+                &__gif {
+                    right: 0;
+                    opacity: 1;
+                    animation: fadeLeft 0.5s linear;
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeDown {
+    0% {
+        top: -2rem;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        top: 2rem;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeLeft {
+    0% {
+        right: -2rem;
+        opacity: 0;
+    }
+    100% {
+        right: 0;
+        opacity: 1;
+    }
+}

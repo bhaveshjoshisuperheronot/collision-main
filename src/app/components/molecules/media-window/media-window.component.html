@@ -1,0 +1,36 @@
+<div class="collide__window__wrapper">
+    <div class="collide__window" [ngStyle]="windowStyle" [class.hidden] = "isHidden === 'true'">
+        <div class="collide__window__header">
+            <div class="collide__window__header__title">{{ label }}</div>
+            <div class="collide__window__header__actions">
+                <div class="collide__window__header__btn">
+                    <div class="collide__window__header__icon min"></div>
+                </div>
+                <div class="collide__window__header__btn">
+                    <div class="collide__window__header__icon max"></div>
+                </div>
+                <div class="collide__window__header__btn">
+                    <div class="collide__window__header__icon close"></div>
+                </div>
+            </div>
+        </div>
+        <div class="collide__window__body">
+            <ng-content class="collide__window__content" select="[contentSlot]"></ng-content>
+        </div>
+    </div>
+    
+    <ng-container *ngIf="variant === 'multi'">
+        <div class="collide__window shadow1" [ngStyle]="windowStyle" [class.hidden] = "isHidden === 'true'">
+            <div class="collide__window__header">
+            </div>
+            <div class="collide__window__body"></div>
+        </div>
+    
+        <div class="collide__window shadow2" [ngStyle]="windowStyle" [class.hidden] = "isHidden === 'true'">
+            <div class="collide__window__header">
+            </div>
+            <div class="collide__window__body"></div>
+        </div>
+    </ng-container>
+    
+</div>

@@ -1,0 +1,24 @@
+.collide {
+    &__badge {
+        font-family: var(--mont-reg);
+        font-size: 1.5rem;
+        background-color: var(--white);
+        color: var(--black);
+        border: 3px solid var(--black);
+        padding: 0.7rem 1.7rem 0.8rem;
+        display: inline-block;
+        position: absolute;
+        -webkit-text-stroke-width: 0px;
+        text-transform: none;
+        white-space: nowrap;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .collide {
+        &__badge {
+            font-size: 1rem;
+            padding: 0.7rem 1.3rem 0.8rem;
+        }
+    }
+}

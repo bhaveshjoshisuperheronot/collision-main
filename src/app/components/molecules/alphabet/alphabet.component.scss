@@ -1,0 +1,62 @@
+.collide {
+    &__alphabet {
+        position: relative;
+        &__text {
+            font-size: 1.2rem;
+            color: var(--white);
+            margin-bottom: 0.7rem;
+            font-family: var(--mont-bold);
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        &__img {
+            width: 9rem;
+            height: 14rem;
+            background-position: top center;
+            margin: 0 auto;
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: block;
+        }
+
+        &__hover-img {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            z-index: 1;
+            pointer-events: none;
+            display: none;
+        }
+
+        &:hover &__hover-img {
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .collide {
+        &__alphabet {
+            &__img {
+                width: 4rem;
+                height: 8rem;
+            }
+
+            &__text {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .collide {
+        &__alphabet {
+            &:hover &__hover-img {
+                display: none;
+            }
+        }
+    }
+}

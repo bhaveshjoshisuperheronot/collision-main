@@ -1,0 +1,17 @@
+.collide {
+    &__text-ticker {
+        width: 100%;
+        padding: 4rem 0;
+        background-image: url(../../../../assets/images/Ticker.png);
+        background-size: 100% 100%;
+        position: relative;
+        z-index: 4;
+        overflow: hidden;
+
+        &__marquee {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+    }
+}

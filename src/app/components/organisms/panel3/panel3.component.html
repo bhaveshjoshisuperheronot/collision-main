@@ -1,0 +1,28 @@
+<app-container>
+    <div class="collide__panel3">
+        <app-title titleFontSize="11.7rem">
+            <app-badge badgeSlot rotate="-10" top="-3.5rem" left="50%" translate="-50%,0%">India,</app-badge>
+            <div titleSlot>The Biggest Stage to compete is here 
+                <div class="collide__panel3__subtitle">Get ready to witness <span class="bold">The Greatest Collision</span> in the worlds of</div>
+                <div class="clear"></div>
+            </div>
+        </app-title>
+        <div class="collide__panel3__sections">
+            <div class="collide__panel3__actions">
+                <div class="collide__panel3__btn">
+                    <app-button label="Entertainment" btnWidth="95%" btnHeigth="6.5rem" btnFontSize="2rem" (click)="changeSection('Entertainment')"></app-button>
+                </div>
+                <div class="collide__panel3__btn">
+                    <app-button label="Music" btnWidth="95%" btnHeigth="6.5rem" btnFontSize="2rem" (click)="changeSection('Music')"></app-button>
+                </div>
+                <div class="collide__panel3__btn">
+                    <app-button label="Sports" btnWidth="95%" btnHeigth="6.5rem" btnFontSize="2rem" (click)="changeSection('Sports')"></app-button>
+                </div>
+                <div class="collide__panel3__btn">
+                    <app-button label="arts" btnWidth="95%" btnHeigth="6.5rem" btnFontSize="2rem" (click)="changeSection('Arts')"></app-button>
+                </div>
+            </div>
+            <div class="collide__panel3__gif" [style.backgroundImage]="gifUrl"></div>
+        </div>
+    </div>
+</app-container>

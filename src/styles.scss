@@ -1,0 +1,75 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./common/reset.scss";
+@import "./common/variables/colors.scss";
+@import "./common/variables/fonts.scss";
+
+body {
+    font-size: var(--body-font-size);
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+// Fonts
+@font-face {
+    font-family: "Rafigen";
+    src: url(./assets/fonts/RAFIGEN.TTF) format("truetype");
+}
+
+@font-face {
+    font-family: "Edosz";
+    src: url(./assets/fonts/EDOSZ.TTF) format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat-black";
+    src: url(./assets/fonts/MONTSERRAT-BLACK.OTF) format("opentype");
+}
+
+@font-face {
+    font-family: "Montserrat-bold";
+    src: url(./assets/fonts/MONTSERRAT-BOLD.OTF) format("opentype");
+}
+
+@font-face {
+    font-family: "Montserrat-extra-bold";
+    src: url(./assets/fonts/MONTSERRAT-EXTRABOLD.OTF) format("opentype");
+}
+
+@font-face {
+    font-family: "Montserrat-light";
+    src: url(./assets/fonts/MONTSERRAT-LIGHT.OTF) format("opentype");
+}
+
+@font-face {
+    font-family: "Montserrat-regular";
+    src: url(./assets/fonts/MONTSERRAT-REGULAR.OTF) format("opentype");
+}
+
+@font-face {
+    font-family: "Montserrat-semi-bold";
+    src: url(./assets/fonts/MONTSERRAT-SEMIBOLD.OTF) format("opentype");
+}
+
+@font-face {
+    font-family: "Montserrat-ultra-light";
+    src: url(./assets/fonts/MONTSERRAT-ULTRALIGHT.OTF) format("opentype");
+}
+// Fonts end

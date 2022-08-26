@@ -1,0 +1,181 @@
+.collide {
+    &__panel6 {
+        width: 90%;
+        padding: 7.5rem 0 5rem;
+        box-sizing: border-box;
+        text-align: center;
+
+        app-title {
+            position: relative;
+            opacity: 0;
+        }
+
+        &__btn {
+            width: 50%;
+            padding: 0.5rem;
+            box-sizing: border-box;
+            bottom: 50px;
+            left: 5px;
+            position: absolute;
+            z-index: 5;
+        }
+
+        &__ticker {
+            width: 100%;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            position: absolute;
+            bottom: -3.5rem;
+
+            .bold {
+                font-family: var(--mont-bold);
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+
+                span {
+                    height: 14px;
+                    margin: 0 5px;
+
+                    &.hidden {
+                        opacity: 0;
+                        width: 0;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.spacer {
+    height: 75px;
+}
+
+.artist-container {
+    display: flex;
+    width: 100%;
+    padding: 0 0 3.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.artist {
+    position: relative;
+    width: 25%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.artist-image {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center right;
+    z-index: 1;
+}
+
+.artist-1 {
+    background-image: url('../../../../assets/images/panel-6/Sumukhi-Image.png');
+    height: 75%;
+    width: 75%;
+    right: 25px;
+    bottom: -1rem;
+}
+
+.artist-2 {
+    background-image: url('../../../../assets/images/panel-6/Biswa-Image.png');
+    height: 75%;
+    width: 80%;
+    right: 0;
+    bottom: -1rem;
+}
+
+.artist-3 {
+    background-image: url('../../../../assets/images/panel-6/Nucleya-Image.png');
+    height: 100%;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    background-size: 100%;
+    background-position: 0 -4rem;
+}
+
+.artist-4 {
+    background-image: url('../../../../assets/images/panel-6/Gullygand-Image.png');
+    height: 100%;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+}
+
+.rsvp-btn {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    background-image: url('../../../../assets/images/panel-6/RSVP\ Button.png');
+}
+
+:host {
+    .animate {
+        .collide {
+            &__panel6 {
+                app-title {
+                    top: 0;
+                    opacity: 1;
+                    animation: fadeDown 0.5s linear;
+                }
+            }
+        }
+        .artist {
+            opacity: 1;
+            animation: fade 1s linear;
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .collide {
+        &__panel6 {
+            padding: 0 0 5rem;
+        }
+    }
+
+    .artist-container {
+        flex-wrap: wrap;
+    }
+
+    .artist {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .artist {
+        width: 100%;
+    }
+}
+
+@keyframes fadeDown {
+    0% {
+        top: -2rem;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

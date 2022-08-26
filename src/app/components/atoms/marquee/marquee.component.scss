@@ -1,0 +1,25 @@
+.collide {
+    &__marquee {
+        position: relative;
+        width: 100vw;
+        max-width: 100%;
+        height: 25px;
+        overflow-x: hidden;
+
+        div {
+            position: absolute;
+            white-space: nowrap;
+            will-change: transform;
+            animation: marquee 10s linear infinite;   
+        }
+    }
+}
+
+@keyframes marquee {
+    0% { 
+        transform: translateX(0); 
+    }
+    100% { 
+        transform: translateX(-50%); 
+    }
+}

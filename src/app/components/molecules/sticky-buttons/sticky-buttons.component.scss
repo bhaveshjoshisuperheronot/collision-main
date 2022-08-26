@@ -1,0 +1,77 @@
+.collide {
+    &__sticky__btns {
+        width: 87%;
+        position: fixed;
+        top: 3.5rem;
+        display: flex;
+        justify-content: space-between;
+        z-index: 5;
+        left: 50%;
+        transform: translate(-50%, 0);
+        animation: float 2s linear infinite;  
+
+        &:hover {
+            animation-play-state: paused;
+        }
+
+        app-button {
+            opacity: 1;
+            position: relative;
+            
+            &:first-child {
+                animation: fadeInLeft 1s linear;
+                left: 0rem;
+            }
+
+            &:last-child {
+                animation: fadeInRight 1s linear;
+                right: 0rem;
+            }
+        }
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        left: -3rem;
+        opacity: 0;
+    }
+    50% {
+        left: -3rem;
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        right: -3rem;
+        opacity: 0;
+    }
+    50% {
+        right: -3rem;
+        opacity: 0;
+    }
+    100% {
+        right: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0% {
+        top: 3.5rem;
+    }
+    25% {
+        top: 3rem;
+    }
+    75% {
+        top: 4rem;
+    }
+    100% {
+        top: 3.5;
+    }
+}

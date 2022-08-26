@@ -1,0 +1,33 @@
+.collide {
+    &__title {
+        font-family: var(--rafigen);
+        font-size: 9.5rem;
+        text-transform: uppercase;
+        color: var(--orange);
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: var(--black);
+        position: relative;
+        display: inline-block;
+        line-height: 0.75;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .collide {
+        &__title {
+            &__text {
+                font-size: 5rem !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .collide {
+        &__title {
+            &__text {
+                font-size: 3rem !important;
+            }
+        }
+    }
+}
