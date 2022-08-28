@@ -13,3 +13,11 @@
         box-sizing: border-box;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .collide {
+        &__container {
+            min-height: 75vh;
+        }
+    }
+}

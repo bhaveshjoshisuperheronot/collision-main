@@ -39,3 +39,11 @@
         opacity: 1;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .collide {
+        &__panel2 {
+            padding: 3.5rem 0 0rem;
+        }
+    }
+}
