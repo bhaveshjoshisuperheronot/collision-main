@@ -106,6 +106,16 @@
                 width: 60%;
                 height: 30rem;
             }
+            &__btn {
+                width: 100%;
+            }
+            &__sections {
+                flex-direction: row;
+                align-items: center;
+            }
+            &__gif {
+                width: 100%;
+            }
         }
     }
 }
